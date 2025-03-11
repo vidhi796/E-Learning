@@ -1,0 +1,678 @@
+{% extends 'base.html' %}
+{% block title%} index{% endblock %}
+{% block body %}
+{% load static %}
+<style>
+    main_sidebar {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        background-color: #f0f0f0;
+    }
+    .media-center {
+        max-width: 100%;
+        width: 100%;
+        padding: 20px;
+    }
+    .media-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .aligned-video {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+    
+    .aligned-video {
+        border: none;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .media-center {
+            padding: 15px;
+        }
+        .aligned-video {
+            max-width: 100%;
+        }
+    }
+    
+    @media (max-width: 480px) {
+      
+        .aligned-video {
+            max-width: 100%;
+        }
+    }
+
+    #container {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        margin: 120px auto;
+        padding: 20px;
+    }
+
+    #sidebar {
+        background-color: #fff;
+        padding: 20px;
+        width: 250px;
+        margin-right: 20px;
+        border-radius: 5px;
+    }
+
+    #sidebar h2 {
+        margin-top: 0;
+    }
+
+    #sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #sidebar li {
+        margin-bottom: 10px;
+    }
+
+    #sidebar a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    #content {
+        background-color: #fff;
+        padding: 20px;
+        flex-grow: 1;
+        border-radius: 5px;
+    }
+
+    #content h1,
+    #content h2 {
+        margin-top: 0;
+    }
+
+    #content ul {
+        list-style: disc;
+        padding-left: 20px;
+    }
+
+    #content li {
+        margin-bottom: 10px;
+    }
+
+    #button {
+        display: inline-block;
+        background-color: #6c3483;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 20px;
+    }
+
+    #button:hover {
+        background-color: #552766;
+    }
+
+    #sidebar {
+        background-color: #fff;
+        padding: 20px;
+        width: 250px;
+        margin-right: 20px;
+        border-radius: 5px;
+        max-height: 90vh;
+        /* Set a maximum height */
+        overflow-y: auto;
+        /* Add vertical scroll when content exceeds height */
+    }
+
+    #content {
+        background-color: #fff;
+        padding: 20px;
+        flex-grow: 1;
+        border-radius: 5px;
+        max-height: 90vh;
+        /* Set a maximum height */
+        overflow-y: auto;
+        /* Add vertical scroll when content exceeds height */
+    }
+
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        #container {
+            flex-direction: column;
+        }
+
+        #sidebar {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        #content {
+            width: 100%;
+        }
+    }
+</style>
+
+</style>
+
+<main_sidebar>
+
+    <div id="container">
+        <div id="sidebar">
+            <h2>INTRODUCTION</h2>
+            <ul>
+                <li><a href="#">Python Overview</a></li>
+                <li><a href="#">Installation & Getting Started</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+                <li><a href="#">What is Syntax?</a></li>
+                <li><a href="#">Python Comments</a></li>
+                <li><a href="#">Python Variables</a></li>
+                <li><a href="#">Python Data Types & Operators</a></li>
+                <li><a href="#">Data Types</a></li>
+                <li><a href="#">Python Numbers</a></li>
+                <li><a href="#">Data Conversion</a></li>
+                <li><a href="#">Type Casting</a></li>
+                <li><a href="#">Python Operators</a></li>
+                <li><a href="#">Python Booleans</a></li>
+                <li><a href="#">Python Strings</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <button id="button" style="float: right;">Next >></button>
+            <button id="button" style="float: left;">
+                << Previous</button>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h1>Python Overview</h1>
+                    <h2>What is Python</h2>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <div class="video_container">
+                        <div class="media-container">
+                            <div class="media-center">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/qARXCXvQXKY?si=GidNleiBiOhUKkUW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <ul>
+                        <li>Python is a dynamically typed, General Purpose Programming Language that supports an
+                            object-oriented programming approach as well as a functional programming approach.</li>
+                        <li>Python is also an interpreted and high-level programming language.</li>
+                        <li>It was created by Guido Van Rossum in 1989.</li>
+                    </ul>
+                    <h2>Features of Python</h2>
+                    <ul>
+                        <li>Python is simple and easy to understand.</li>
+                        <li>It is Interpreted and platform-independent which makes debugging very easy.</li>
+                        <li>Python is an open-source programming language.</li>
+                        <li>Python provides very big library support. Some of the popular libraries include NumPy</li>
+                        <li>It is possible to integrate other programming languages within python.</li>
+                    </ul>
+        </div>
+    </div>
+</main_sidebar>
+
+{% endblock %}
